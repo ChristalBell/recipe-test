@@ -8,15 +8,18 @@ import Image from "next/image";
 const Hero = ({ recipe }: any) => {
   console.log(recipe);
   return (
-    <Box sx={{ margin: "4rem" }}>
+    <Box sx={{ margin: "2rem" }}>
       <Image
         src={recipe.picture}
         alt={recipe.title}
-        width={750}
-        height={400}
+        layout="responsive"
+        height={1}
+        width={1}
         style={{
           borderRadius: "1rem",
           marginBottom: "1rem",
+          height: "30vh",
+          width: "70vw",
         }}
       />
       <Typography variant="h3" sx={{ margin: "1rem 0", fontWeight: "bold" }}>
