@@ -45,7 +45,7 @@ const Home = () => {
       }}
     >
       <Box sx={{ backgroundColor: "white" }}>
-        <Hero />
+        <Hero recipe={recipe} />
         <Preparation />
         <Ingredients />
         <Instructions />
