@@ -8,10 +8,21 @@ import Image from "next/image";
 const Hero = ({ recipe }: any) => {
   console.log(recipe);
   return (
-    <Box>
-      <Image src={recipe.picture} alt={recipe.title} width={80} height={40} />
-      <Typography variant="h1">{recipe.title}</Typography>
-      <Typography>{recipe.intro}</Typography>
+    <Box sx={{ margin: "4rem" }}>
+      <Image
+        src={recipe.picture}
+        alt={recipe.title}
+        width={750}
+        height={400}
+        style={{
+          borderRadius: "1rem",
+          marginBottom: "1rem",
+        }}
+      />
+      <Typography variant="h3" sx={{ margin: "1rem 0", fontWeight: "bold" }}>
+        {recipe.title}
+      </Typography>
+      <Typography sx={{ lineHeight: "1.75rem" }}>{recipe.intro}</Typography>
     </Box>
   );
 };
