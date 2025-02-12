@@ -44,7 +44,7 @@ const Home = () => {
         backgroundColor: COLORS.cream,
       }}
     >
-      <Box sx={{ backgroundColor: "white" }}>
+      <Box sx={{ backgroundColor: "white", width: "80vw", margin: "2rem" }}>
         <Hero recipe={recipe} />
         <Preparation />
         <Ingredients />
