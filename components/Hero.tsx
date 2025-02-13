@@ -2,6 +2,7 @@ import Typography from "@mui/material/Typography";
 import React from "react";
 import Box from "@mui/material/Box";
 import Image from "next/image";
+import { COLORS } from "@/styles/colors";
 
 // import { data } from "@/data";
 
@@ -22,10 +23,15 @@ const Hero = ({ recipe }: any) => {
           width: "70vw",
         }}
       />
-      <Typography variant="h3" sx={{ margin: "1rem 0", fontWeight: "bold" }}>
+      <Typography
+        variant="h3"
+        sx={{ margin: "1rem 0", fontWeight: "bold", color: COLORS.black }}
+      >
         {recipe.title}
       </Typography>
-      <Typography sx={{ lineHeight: "1.75rem" }}>{recipe.intro}</Typography>
+      <Typography sx={{ lineHeight: "1.75rem", color: COLORS.grey }}>
+        {recipe.intro}
+      </Typography>
     </Box>
   );
 };

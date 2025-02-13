@@ -34,7 +34,6 @@ const Home = () => {
       .then((data) => setRecipe(data));
   }, []);
 
-  console.log(recipe);
   return (
     <Box
       sx={{

@@ -17,14 +17,17 @@ const Instructions = ({ recipe }: any) => {
       {recipe.steps.map((step: any) => {
         const firstThree = step.split(" ", 3).join(" ");
         const restOfText = step.split(firstThree);
-        console.log(firstThree);
-        console.log(restOfText);
-
         return (
-          <ol key={step} style={{ display: "list-item" }}>
+          <ol
+            key={step}
+            style={{
+              display: "list-item",
+              marginLeft: "1.5rem",
+            }}
+          >
             <li
               style={{
-                marginLeft: "-1.35rem",
+                marginLeft: "-2rem",
                 listStyleType: "none",
               }}
             >
