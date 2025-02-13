@@ -1,7 +1,7 @@
 import Typography from "@mui/material/Typography";
 import React from "react";
 
-const Instructions = () => {
+const Instructions = ({ recipe }: any) => {
   return <Typography>Instructions</Typography>;
 };
 

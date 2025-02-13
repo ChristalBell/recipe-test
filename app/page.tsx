@@ -53,10 +53,10 @@ const Home = () => {
         }}
       >
         <Hero recipe={recipe} />
-        <Preparation />
-        <Ingredients />
-        <Instructions />
-        <Nutrition />
+        <Preparation recipe={recipe} />
+        <Ingredients recipe={recipe} />
+        <Instructions recipe={recipe} />
+        <Nutrition recipe={recipe} />
       </Box>
     </Box>
   );
