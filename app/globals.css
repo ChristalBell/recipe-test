@@ -6,3 +6,11 @@ body {
 li::marker {
   color: #895544;
 }
+
+ol {
+  color: #895544;
+}
+
+li {
+  color: #635f5a;
+}
