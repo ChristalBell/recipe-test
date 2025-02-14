@@ -2,11 +2,18 @@ import Typography from "@mui/material/Typography";
 import React from "react";
 import Box from "@mui/material/Box";
 import { COLORS } from "@/styles/colors";
+import useMediaQuery from "@mui/material/useMediaQuery";
 
 const Nutrition = ({ recipe }: any) => {
-  console.log(recipe.nutrition.fat);
+  const mobile = useMediaQuery("(min-width:600px)");
   return (
-    <Box sx={{ margin: " -4rem 2rem", padding: "2rem" }}>
+    <Box
+      sx={{
+        margin: " -4rem 2rem",
+        padding: "2rem",
+        transform: "translateY(-3rem)",
+      }}
+    >
       <Typography variant="h5" sx={{ color: COLORS.red, marginBottom: "1rem" }}>
         Nutrition
       </Typography>
@@ -32,7 +39,7 @@ const Nutrition = ({ recipe }: any) => {
             {recipe.nutrition.calories}
           </Typography>
         </Box>
-        <hr style={{ width: "75vw" }}></hr>
+        <hr style={{ width: mobile ? "75vw" : "50vw" }}></hr>
 
         <Box
           sx={{
@@ -45,7 +52,7 @@ const Nutrition = ({ recipe }: any) => {
             {recipe.nutrition.carbs}
           </Typography>
         </Box>
-        <hr style={{ width: "75vw" }}></hr>
+        <hr style={{ width: mobile ? "75vw" : "50vw" }}></hr>
 
         <Box
           sx={{
@@ -58,13 +65,13 @@ const Nutrition = ({ recipe }: any) => {
             {recipe.nutrition.protein}
           </Typography>
         </Box>
-        <hr style={{ width: "75vw" }}></hr>
+        <hr style={{ width: mobile ? "75vw" : "50vw" }}></hr>
 
         <Box
           sx={{
             display: "flex",
             justifyContent: "space-around",
-            paddingBottom: "4rem",
+            paddingBottom: "2rem",
           }}
         >
           <Typography>Fat</Typography>

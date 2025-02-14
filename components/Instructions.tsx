@@ -2,13 +2,16 @@ import Typography from "@mui/material/Typography";
 import React from "react";
 import Box from "@mui/material/Box";
 import { COLORS } from "@/styles/colors";
+import useMediaQuery from "@mui/material/useMediaQuery";
 
 const Instructions = ({ recipe }: any) => {
+  const mobile = useMediaQuery("(min-width:600px)");
   return (
     <Box
       sx={{
         margin: "2rem",
-        padding: "1rem",
+        padding: " 1rem",
+        transform: "translateY(-3rem)",
       }}
     >
       <Typography variant="h5" sx={{ color: COLORS.red }}>
@@ -40,7 +43,7 @@ const Instructions = ({ recipe }: any) => {
           </ol>
         );
       })}
-      <hr style={{ width: "75vw" }}></hr>
+      <hr style={{ width: mobile ? "75vw" : "50vw" }}></hr>
     </Box>
   );
 };
